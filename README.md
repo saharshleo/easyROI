@@ -12,6 +12,19 @@ numpy
 
 ### Running test code
 
+* Create virtual environment and activate it
+
+```
+python3 -m venv venv_easy_roi
+source venv_easy_roi/bin/activate
+```
+
+* install requirements.txt
+
+```
+pip3 install requirements.txt
+```
+
 ```
 git clone https://github.com/saharshleo/easyROI.git
 ```
@@ -119,3 +132,6 @@ quantity = 2
     'type': 'polygon'
 }
 ```
+
+
+See progress in [TODO.md](TODO.md)
