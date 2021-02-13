@@ -2,7 +2,7 @@
 
 Helper library for drawing ROI in Computer Vision Applications
 
-![demo](assets/run.gif)
+![demo](https://github.com/saharshleo/easyROI/blob/main/assets/run.gif)
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -101,7 +101,7 @@ roi_helper = EasyROI(verbose=True)
 
 #### Rectangular roi
 
-![rectangle_demo](assets/rectangle.gif)
+![rectangle_demo](https://github.com/saharshleo/easyROI/blob/main/assets/rectangle.gif)
 
 ```python
 rect_roi = roi_helper.draw_rectangle(frame, 3)  # quantity=3 specifies number of rectangles to draw
@@ -114,7 +114,7 @@ frame_temp = roi_helper.visualize_roi(frame, rect_roi)
 
 #### Line Roi
 
-![line_demo](assets/line.gif)
+![line_demo](https://github.com/saharshleo/easyROI/blob/main/assets/line.gif)
 
 ```python
 line_roi = roi_helper.draw_line(frame, 3)  # quantity=3 specifies number of lines to draw
@@ -127,7 +127,7 @@ frame_temp = roi_helper.visualize_roi(frame, line_roi)
 
 #### Circle Roi
 
-![circle_demo](assets/circle.gif)
+![circle_demo](https://github.com/saharshleo/easyROI/blob/main/assets/circle.gif)
 
 ```python
 circle_roi = roi_helper.draw_circle(frame, 3)   # quantity=3 specifies number of circles to draw
@@ -140,7 +140,7 @@ frame_temp = roi_helper.visualize_roi(frame, circle_roi)
 
 #### Polygon Roi
 
-![polygon_demo](assets/polygon.gif)
+![polygon_demo](https://github.com/saharshleo/easyROI/blob/main/assets/polygon.gif)
 
 ```python
 polygon_roi = roi_helper.draw_polygon(frame, 3) # quantity=3 specifies number of polygons to draw
