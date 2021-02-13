@@ -46,6 +46,9 @@ class EasyROI:
     def draw_line(self, frame, quantity=1):
         if self.verbose:
             print("[DEBUG] Entered draw_line")
+            print("[DEBUG] Draw {} line(s)".format(quantity))
+            print("[DEBUG] Drag the cursor to draw the line")
+            print("[DEBUG] Press Esc to leave the process")
 
         self.img = frame.copy()
         self.quantity = quantity
@@ -125,6 +128,10 @@ class EasyROI:
     def draw_polygon(self, frame, quantity=1):
         if self.verbose:
             print("[DEBUG] Entered draw_polygon")
+            print("[DEBUG] Draw {} polygon(s)".format(quantity))
+            print("[DEBUG] Draw multiple lines by dragging the cursor")
+            print("[DEBUG] Double Click to complete the polygon")
+            print("[DEBUG] Press Esc to leave the process")
 
         self.img = frame.copy()
         self.quantity = quantity
@@ -168,6 +175,9 @@ class EasyROI:
     def draw_circle(self, frame, quantity=1):
         if self.verbose:
             print("[DEBUG] Entered draw_circle")
+            print("[DEBUG] Draw {} circle(s)".format(quantity))
+            print("[DEBUG] Select center and drag for radius")
+            print("[DEBUG] Press Esc to leave the process")
 
         self.img = frame.copy()
         self.quantity = quantity
@@ -292,20 +302,20 @@ class EasyROI:
         '''
 
         if event == cv2.EVENT_LBUTTONDOWN:
-            if self.polygon_dblclk:
-                self.polygon_dblclk = False
+            # if self.polygon_dblclk:
+            #     self.polygon_dblclk = False
             
-            else:
-                self.drawing = True
+            # else:
+            self.drawing = True
 
-                self.polygon_vertices.append((x, y))
+            self.polygon_vertices.append((x, y))
 
-                if len(self.polygon_vertices) > 1:
-                    prev_vertex = self.polygon_vertices[-2]
-                    current_vertex = self.polygon_vertices[-1]
-                    
-                    cv2.line(self.img, prev_vertex, current_vertex, self.brush_color_finished, 2)
-                    self.orig_frame = deepcopy(self.img)
+            if len(self.polygon_vertices) > 1:
+                prev_vertex = self.polygon_vertices[-2]
+                current_vertex = self.polygon_vertices[-1]
+                
+                cv2.line(self.img, prev_vertex, current_vertex, self.brush_color_finished, 2)
+                self.orig_frame = deepcopy(self.img)
 
         elif event == cv2.EVENT_MOUSEMOVE and self.drawing:
             self.img = deepcopy(self.orig_frame)

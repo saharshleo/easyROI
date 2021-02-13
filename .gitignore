@@ -1,6 +1,6 @@
 input/
 output/
-venv_easy_roi/
+venv*/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

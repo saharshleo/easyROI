@@ -1,42 +1,160 @@
-# EasyROI
+# [EasyROI](https://github.com/saharshleo/easyROI)
+
+Helper library for drawing ROI in Computer Vision Applications
+
+![demo](assets/run.gif)
+
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
+
+- [EasyROI](#easyroi)
+  - [Table of Contents](#table-of-contents)
+  - [About The Project](#about-the-project)
+    - [Tech Stack](#tech-stack)
+    - [File Structure](#file-structure)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+  - [Usage](#usage)
+    - [Using EasyROI in your project](#using-easyroi-in-your-project)
+      - [Rectangular roi](#rectangular-roi)
+      - [Line Roi](#line-roi)
+      - [Circle Roi](#circle-roi)
+      - [Polygon Roi](#polygon-roi)
+  - [Formats of roi](#formats-of-roi)
+    - [Rectangle](#rectangle)
+    - [Line](#line)
+    - [Circle](#circle)
+    - [Polygon](#polygon)
+  - [Future Work](#future-work)
+  - [Contributors](#contributors)
+  - [Acknowledgements and Resources](#acknowledgements-and-resources)
+  - [License](#license)
 
 
-### Requirements
-
-```
-python3
-cv2
-numpy
-```
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
 
-### Running test code
 
-* Create virtual environment and activate it
+### Tech Stack
 
-```
+* [Python](https://www.python.org/)
+* [OpenCV](https://opencv.org/)
+* [Numpy](https://numpy.org/)  
+
+### File Structure 
+    .  
+    ├── EasyROI  
+    │   ├── __init__.py  
+    │   ├── easyROI.py  
+    │   └── utils.py  
+    ├── input
+    │   ├── overpass.mp4   
+    ├── output/  
+    ├── dev_main.py             # Code for testing during developing phase
+    ├── test_library.py         # Code for testing during testing phase
+    ├── DEV_README.md           # README for developing phase 
+    ├── LICENSE  
+    └── README.md 
+    
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+### Prerequisites
+
+* python>=3.6
+* pip
+
+
+### Installation
+1. Create virtual environment
+
+```sh
 python3 -m venv venv_easy_roi
 source venv_easy_roi/bin/activate
 ```
 
-* install requirements.txt
+2. Install EasyROI
 
-```
-pip3 install requirements.txt
-```
-
-```
-git clone https://github.com/saharshleo/easyROI.git
-```
-
-```
-python main.py
+```sh
+pip install EasyROI
 ```
 
 
-### Formats of roi
+<!-- USAGE EXAMPLES -->
+## Usage
 
-1. **Rectangle**
+* Read the instruction in terminal while drawing roi
+
+
+### Using EasyROI in your project
+
+* Initializing
+
+```python
+from EasyROI import EasyROI
+
+roi_helper = EasyROI(verbose=True)
+```
+
+#### Rectangular roi
+
+![rectangle_demo](assets/rectangle.gif)
+
+```python
+rect_roi = roi_helper.draw_rectangle(frame, 3)  # quantity=3 specifies number of rectangles to draw
+
+frame_temp = roi_helper.visualize_roi(frame, rect_roi)
+```
+
+* See roi format in - [Rectangle](#rectangle)
+
+
+#### Line Roi
+
+![line_demo](assets/line.gif)
+
+```python
+line_roi = roi_helper.draw_line(frame, 3)  # quantity=3 specifies number of lines to draw
+
+frame_temp = roi_helper.visualize_roi(frame, line_roi)
+```
+
+* See roi format in - [Line](#line)
+
+
+#### Circle Roi
+
+![circle_demo](assets/circle.gif)
+
+```python
+circle_roi = roi_helper.draw_circle(frame, 3)   # quantity=3 specifies number of circles to draw
+
+frame_temp = roi_helper.visualize_roi(frame, circle_roi)
+```
+
+* See roi format in - [Circle](#circle)
+
+
+#### Polygon Roi
+
+![polygon_demo](assets/polygon.gif)
+
+```python
+polygon_roi = roi_helper.draw_polygon(frame, 3) # quantity=3 specifies number of polygons to draw
+
+frame_temp = roi_helper.visualize_roi(frame, polygon_roi)
+```
+
+* See roi format in - [Polygon](#polygon)
+
+
+<!-- FORMAT OF ROI -->
+## Formats of roi
+
+### Rectangle
 
 quantity = 1
 
@@ -56,7 +174,7 @@ quantity = 1
 }
 ```
 
-2. **Line**
+### Line
 
 quantity = 2
 
@@ -78,7 +196,7 @@ quantity = 2
 }
 ```
 
-3. **Circle**
+### Circle
 
 quantity = 2
 
@@ -102,7 +220,7 @@ quantity = 2
 }
 ```
 
-4. **Polygon**
+### Polygon
 
 quantity = 2
 
@@ -134,4 +252,21 @@ quantity = 2
 ```
 
 
-See progress in [TODO.md](TODO.md)
+<!-- FUTURE WORK -->
+## Future Work
+* See [TODO.md](TODO.md) for seeing developments of this project
+
+
+
+<!-- CONTRIBUTORS -->
+## Contributors
+* [saharshleo](https://github.com/saharshleo)
+
+
+<!-- ACKNOWLEDGEMENTS AND REFERENCES -->
+## Acknowledgements and Resources
+* [Packaging](https://www.codementor.io/@ajayagrawal295/how-to-publish-your-own-python-package-12tbhi20tf)
+
+
+<!-- LICENSE -->
+## [License](LICENSE)
