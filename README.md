@@ -1,5 +1,14 @@
+![stargazers](https://img.shields.io/github/stars/saharshleo/easyROI)
+![issues](https://img.shields.io/github/issues/saharshleo/easyROI)
+![forks](https://img.shields.io/github/forks/saharshleo/easyROI)
+![license](https://img.shields.io/github/license/saharshleo/easyROI)
+
 # [EasyROI](https://github.com/saharshleo/easyROI)
 
+[![Downloads](https://static.pepy.tech/personalized-badge/easyroi?period=total&units=international_system&left_color=lightgrey&right_color=black&left_text=Downloads)](https://pepy.tech/project/easyroi)
+[![PyPI version](https://badge.fury.io/py/EasyROI.svg)](https://badge.fury.io/py/EasyROI)
+  
+  
 Helper library for drawing ROI in Computer Vision Applications
 
 ![demo](https://github.com/saharshleo/easyROI/blob/main/assets/run.gif)
