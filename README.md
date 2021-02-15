@@ -5,7 +5,7 @@
 
 # [EasyROI](https://github.com/saharshleo/easyROI)
 
-[![Downloads](https://static.pepy.tech/personalized-badge/easyroi?period=total&units=international_system&left_color=lightgrey&right_color=black&left_text=Downloads)](https://pepy.tech/project/easyroi)
+[![Downloads](https://pepy.tech/badge/easyroi)](https://pepy.tech/project/easyroi)
 [![PyPI version](https://badge.fury.io/py/EasyROI.svg)](https://badge.fury.io/py/EasyROI)
   
   
