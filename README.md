@@ -5,7 +5,8 @@
 
 # [EasyROI](https://github.com/saharshleo/easyROI)
 
-[![Downloads](https://pepy.tech/badge/easyroi)](https://pepy.tech/project/easyroi)
+<!-- [![Downloads](https://pepy.tech/badge/easyroi)](https://pepy.tech/project/easyroi) -->
+[![Downloads](https://pepy.tech/badge/easyroi/month)](https://pepy.tech/project/easyroi)
 [![PyPI version](https://badge.fury.io/py/EasyROI.svg)](https://badge.fury.io/py/EasyROI)
   
   
