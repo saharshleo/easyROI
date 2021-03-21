@@ -6,7 +6,7 @@ with open("README.md", 'r') as f:
 setuptools.setup(
     name='EasyROI',
     packages=setuptools.find_packages(),
-    version='1.0.1',
+    version='1.0.3',
     description='ROI Helper',
     long_description=long_description,
     long_description_content_type='text/markdown',

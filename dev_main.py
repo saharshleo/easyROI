@@ -21,6 +21,12 @@ if __name__=='__main__':
     pprint(rect_roi)
 
     frame_temp = roi_helper.visualize_roi(frame, rect_roi)
+
+    # crop drawn rectangles
+    cropped_rects = roi_helper.crop_roi(frame, rect_roi)
+    for index, crop in cropped_rects.items():
+        cv2.imshow(str(index), crop)
+
     cv2.imshow("frame", frame_temp)
     key = cv2.waitKey(0)
     if key & 0xFF == ord('q'):
@@ -45,6 +51,12 @@ if __name__=='__main__':
     pprint(circle_roi)
 
     frame_temp = roi_helper.visualize_roi(frame, circle_roi)
+
+    # crop drawn circles
+    cropped_circles = roi_helper.crop_roi(frame, circle_roi)
+    for index, crop in cropped_circles.items():
+        cv2.imshow(str(index), crop)
+
     cv2.imshow("frame", frame_temp)
     key = cv2.waitKey(0)
     if key & 0xFF == ord('q'):
@@ -57,6 +69,12 @@ if __name__=='__main__':
     pprint(polygon_roi)
 
     frame_temp = roi_helper.visualize_roi(frame, polygon_roi)
+
+    # crop drawn polygons
+    cropped_polys = roi_helper.crop_roi(frame, polygon_roi)
+    for index, crop in cropped_polys.items():
+        cv2.imshow(str(index), crop)
+
     cv2.imshow("frame", frame_temp)
     key = cv2.waitKey(0)
     if key & 0xFF == ord('q'):

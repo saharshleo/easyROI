@@ -10,5 +10,5 @@
 - [ ] Delete last roi
 - [ ] Custom Labels for roi
 - [ ] Delete roi based on label
-- [ ] Option to Crop drawn roi if possible
+- [x] Option to Crop drawn roi if possible
 - [ ] Custom Colors

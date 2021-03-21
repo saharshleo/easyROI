@@ -10,7 +10,8 @@
 [![PyPI version](https://badge.fury.io/py/EasyROI.svg)](https://badge.fury.io/py/EasyROI)
   
   
-Helper library for drawing ROI in Computer Vision Applications
+Helper library for drawing ROI in Computer Vision Applications  
+**Now you can crop the drawn roi's**
 
 ![demo](https://github.com/saharshleo/easyROI/blob/main/assets/run.gif)
 
@@ -31,6 +32,7 @@ Helper library for drawing ROI in Computer Vision Applications
       - [Line Roi](#line-roi)
       - [Circle Roi](#circle-roi)
       - [Polygon Roi](#polygon-roi)
+      - [Cropping drawn roi](#cropping-drawn-roi)
   - [Formats of roi](#formats-of-roi)
     - [Rectangle](#rectangle)
     - [Line](#line)
@@ -160,6 +162,17 @@ frame_temp = roi_helper.visualize_roi(frame, polygon_roi)
 
 * See roi format in - [Polygon](#polygon)
 
+
+#### Cropping drawn roi
+
+```python
+polygon_roi = roi_helper.draw_polygon(frame, 3) # quantity=3 specifies number of polygons to draw
+
+cropped_polys = roi_helper.crop_roi(frame, polygon_roi)
+```
+
+* Can do similarly for rectangular, circle roi
+* Returns dictionary with `key` value same as roi_label and value as image of cropped version
 
 <!-- FORMAT OF ROI -->
 ## Formats of roi

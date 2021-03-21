@@ -302,20 +302,20 @@ class EasyROI:
         '''
 
         if event == cv2.EVENT_LBUTTONDOWN:
-            # if self.polygon_dblclk:
-            #     self.polygon_dblclk = False
+            if self.polygon_dblclk:
+                self.polygon_dblclk = False
             
-            # else:
-            self.drawing = True
+            else:
+                self.drawing = True
 
-            self.polygon_vertices.append((x, y))
+                self.polygon_vertices.append((x, y))
 
-            if len(self.polygon_vertices) > 1:
-                prev_vertex = self.polygon_vertices[-2]
-                current_vertex = self.polygon_vertices[-1]
-                
-                cv2.line(self.img, prev_vertex, current_vertex, self.brush_color_finished, 2)
-                self.orig_frame = deepcopy(self.img)
+                if len(self.polygon_vertices) > 1:
+                    prev_vertex = self.polygon_vertices[-2]
+                    current_vertex = self.polygon_vertices[-1]
+                    
+                    cv2.line(self.img, prev_vertex, current_vertex, self.brush_color_finished, 2)
+                    self.orig_frame = deepcopy(self.img)
 
         elif event == cv2.EVENT_MOUSEMOVE and self.drawing:
             self.img = deepcopy(self.orig_frame)
@@ -389,3 +389,27 @@ class EasyROI:
             pass
         
         return img
+
+    
+    def crop_roi(self, frame, roi_dict):
+        if 'roi' not in roi_dict:
+            return []
+
+        img = frame.copy()
+
+        if roi_dict['type'] == 'rectangle':
+            cropped_images = crop_rect(img, roi_dict)
+            
+        elif roi_dict['type'] == 'line':
+            print("[ERROR] What to crop in line roi:)")
+
+        elif roi_dict['type'] == 'circle':
+            cropped_images = crop_circle(img, roi_dict)
+
+        elif roi_dict['type'] == 'polygon':
+            cropped_images = crop_polygon(img, roi_dict)
+
+        elif roi_dict['type'] == 'cuboid':
+            pass
+        
+        return cropped_images

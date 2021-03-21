@@ -1,6 +1,7 @@
 input/
 output/
 venv*/
+prev_releases/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
