@@ -94,6 +94,11 @@ source venv_easy_roi/bin/activate
 pip install EasyROI
 ```
 
+If you already have opencv installed:
+```sh
+pip install --no-dependencies EasyROI
+```
+
 
 <!-- USAGE EXAMPLES -->
 ## Usage
