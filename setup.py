@@ -13,7 +13,7 @@ setuptools.setup(
     author='Saharsh',
     url='https://github.com/saharshleo/easyROI',
     license='MIT',
-    install_requires=['opencv-python==4.5.1.48', 'numpy==1.19.5'],
+    install_requires=['opencv-python==4.5.1.48', 'numpy==1.22.0'],
     python_requires='>=3.6',
     setup_requires=[],
     tests_require=[],
